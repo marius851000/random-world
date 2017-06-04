@@ -21,9 +21,12 @@ class batiment:
 				self.categorie = "magasin"
 			else:
 				self.categorie = "maison"
-		print("    batiment de type "+self.categorie+" creer :")
 		if self.categorie == "maison" or self.categorie == "hebergement" or self.categorie == "magasin":
 			self.habitants = genererFamille(self)
 		else:
-			self.habitants = 0
-		
+			self.habitants = []
+	
+	def out(self):
+		print("    batiment de type "+self.categorie+" creer :")
+		for loop in self.habitants:
+			loop.out()

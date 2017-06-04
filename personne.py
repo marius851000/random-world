@@ -49,13 +49,6 @@ def genererFamille(batiment):
 	pere.marriedTo = mere
 	if random.randrange(0,3):#si 0 alors pas d'enfin sinon enfant
 		pass
-	aRetourner = []
-	if mere != None:
-		aRetourner.append(mere)
-	if pere != None:
-		aRetourner.append(pere)
-		
-	for loop in aRetourner:
-		loop.out()
+	aRetourner = [pere,mere]
 	
 	return aRetourner

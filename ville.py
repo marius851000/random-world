@@ -20,7 +20,11 @@ class ville:
 		    self.batimentQuant = random.randrange(10,20)
 		else:
 			self.batimentQuant = random.randrange(3,10)
-		print("ville de type \""+self.categorie+"\" creer avec "+str(self.batimentQuant)+" batiment :")
 		self.batiment=[batiment(categorie="mairie")]
 		for loop in range(self.batimentQuant):#generation des batiment
 			self.batiment.append(batiment())
+	
+	def out(self):
+		print("ville de type \""+self.categorie+"\" creer avec "+str(self.batimentQuant)+" batiment :")
+		for loop in self.batiment:
+			loop.out()
