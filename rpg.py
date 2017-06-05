@@ -20,7 +20,7 @@ class RPG:
 		self.batiment = None
 		play = True
 		while play:
-			entree = input("->")
+			entree = raw_input()
 			splited = entree.split(" ")
 			if splitted[0] == "goToCity":
 				if self.place == self.ville[int(splitted[1])]:
