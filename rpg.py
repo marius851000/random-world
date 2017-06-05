@@ -22,10 +22,13 @@ class RPG:
 		while play:
 			entree = raw_input()
 			splited = entree.split(" ")
-			if splitted[0] == "goToCity":
-				if self.place == self.ville[int(splitted[1])]:
+			if splited[0] == "goToCity":
+				if self.place == self.ville[int(splited[1])]:
 					print("vous etes deja dans cette ville")
 				elif self.batiment != None:
 					print("vous devez d'abors sortir du batiment.")
+				else:
+					self.place=self.ville[int(splited[1])]
+					print("vous vous deplacer vers une autre ville")
 				
 				
