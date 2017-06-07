@@ -8,4 +8,11 @@ class graphic:
 		print(self.game.start())
 		playing = True
 		while playing:
-			print(self.game.input([input(),True]))#True : time pass, False : command without time advance
+			entre = input()
+			resultat = self.game.input([entre,True])#True : time pass, False : command without time advance
+			if resultat['ok'] == False:
+				print("votre entré est incorrecte")
+			self.rendu(resultat)
+	
+	def rendu(self, resultat):
+		print(resultat)

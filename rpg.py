@@ -16,12 +16,14 @@ class rpg:
 			loop.out()
 	
 	def generateOut(self):
-		player = { "city":self.place,
+		player = { "ok" : self.ok,
+		"city" : self.place,
 		"batiment" : self.batiment,
 		"change" : self.change}
 		return player
 	
 	def start(self):
+		self.ok = True
 		self.place = self.ville[0]
 		self.batiment = None
 		self.change = ["gameStarted"]
@@ -30,6 +32,7 @@ class rpg:
 		return player
 	
 	def input(self,command):
+		self.ok = True
 		self.change=[]
 		timeAdvance = command[1]
 		commande = command[0]
