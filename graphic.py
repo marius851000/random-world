@@ -8,7 +8,7 @@ class graphic:
 		print(self.game.start())
 		playing = True
 		while playing:
-			entre = input()
+			entre = input("->")
 			resultat = self.game.input([entre,True])#True : time pass, False : command without time advance
 			if resultat['ok'] == False:
 				print("votre entré est incorrecte")
