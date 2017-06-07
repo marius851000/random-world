@@ -13,7 +13,6 @@ class ville:
 				self.categorie = "petit"
 		else:
 			self.categorie = categorie
-		
 		if self.categorie == "grand":#nombre de batiment
 			self.batimentQuant = random.randrange(20,40)
 		elif self.categorie == "moyen":

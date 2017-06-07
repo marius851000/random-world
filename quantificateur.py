@@ -19,7 +19,7 @@ def quantifie(nombre, masculin = True):
 		return "beaucoup"
 	else:
 		return "enormement"
-	
+
 if __name__ == "__main__":
 	for loop in range(15):
 		print(str(loop) + " : " + quantifie(loop, True) + "-" + quantifie(loop, False))

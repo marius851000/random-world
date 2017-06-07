@@ -1,6 +1,6 @@
 from graphic import *
 
-import sys
+#import sys
 
 ##orig_stdout = sys.stdout
 ##f = open('out.txt', 'w')

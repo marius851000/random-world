@@ -8,8 +8,7 @@ class batiment:
 		hebergement -> maison + hebergement pour le gain
 		magasin -> maison + vend des choses ( objet ou services )
 		prison -> prison, n'abrite que les prisonnier
-		mairie -> un par village, n'abrite personne
-		"""		
+		mairie -> un par village, n'abrite personne"""
 		self.categorie=categorie
 		if self.categorie == None:
 			temp = random.randrange(0,20)
