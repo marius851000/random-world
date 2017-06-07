@@ -51,6 +51,18 @@ class graphic:
 			if resultat['batiment'] != None:#si dans un batiment
 				print("vous vous trouvez dans un batiment")
 			else:#si dans la place de la ville
-				print(CategorieBatimentDansVille(resultat["city"]))
+				categorie = CategorieBatimentDansVille(resultat["city"])
+				quantMaison = len(categorie["maison"])
+				quantHebergment = len(categorie["hebergement"])
+				quantMagasin = len(categorie["magasin"])
+				quantPrison = len(categorie["prison"])
+				quantMairie = len(categorie["mairie"])
+				print("Vous êtes dans une ville avec :")
+				print(str(quantMaison)+" maison,")
+				print(str(quantHebergment)+" hebergement,")
+				print(str(quantMagasin)+" magasin,")
+				print(str(quantPrison)+" prison,")
+				print(str(quantMairie)+" mairie,")
+				
 		else:
 			print("vous n'êtes pas dans une ville.")
