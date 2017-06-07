@@ -1,6 +1,8 @@
 from rpg import *
 from ville import *
 from batiment import *
+from quantificateur import quantifie
+
 
 def CategorieBatimentDansVille(ville):
 	maison = []
@@ -58,11 +60,11 @@ class graphic:
 				quantPrison = len(categorie["prison"])
 				quantMairie = len(categorie["mairie"])
 				print("Vous êtes dans une ville avec :")
-				print(str(quantMaison)+" maison,")
-				print(str(quantHebergment)+" hebergement,")
-				print(str(quantMagasin)+" magasin,")
-				print(str(quantPrison)+" prison,")
-				print(str(quantMairie)+" mairie,")
+				print(quantifie(quantMaison, False)+" maison,")
+				print(quantifie(quantHebergment, True)+" hebergement,")
+				print(quantifie(quantMagasin, True)+" magasin,")
+				print(quantifie(quantPrison, False)+" prison,")
+				print(quantifie(quantMairie, False)+" mairie,")
 				
 		else:
 			print("vous n'êtes pas dans une ville.")
