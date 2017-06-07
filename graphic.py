@@ -15,4 +15,13 @@ class graphic:
 			self.rendu(resultat)
 	
 	def rendu(self, resultat):
-		print(resultat)
+		for loop in resultat['change']:
+			pass
+		
+		if resultat['city'] != None:#si dans une ville
+			if resultat['batiment'] != None:#si dans un batiment
+				print("vous vous trouvez dans un batiment")
+			else:#si dans la place de la ville
+				print("vous êtes sur la place de la ville")
+		else:
+			print("vous n'êtes pas dans une ville.")
