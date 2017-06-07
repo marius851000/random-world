@@ -1,4 +1,33 @@
 from rpg import *
+from ville import *
+from batiment import *
+
+def CategorieBatimentDansVille(ville):
+	maison = []
+	hebergement = []
+	magasin = []
+	prison = []
+	mairie = []
+	for loop in ville.batiment:
+		if loop.categorie == "maison":
+			maison.append(loop)
+		elif loop.categorie == "hebergement":
+			hebergement.append(loop)
+		elif loop.categorie == "magasin":
+			magasin.append(loop)
+		elif loop.categorie == "prison":
+			prison.append(loop)
+		elif loop.categorie == "mairie":
+			mairie.append(loop)
+		else:
+			pass
+	
+	retour = {"maison":maison,
+	"hebergement":hebergement,
+	"magasin":magasin,
+	"prison":prison,
+	"mairie":mairie}
+	return retour
 
 class graphic:
 	def __init__(self):
@@ -22,6 +51,6 @@ class graphic:
 			if resultat['batiment'] != None:#si dans un batiment
 				print("vous vous trouvez dans un batiment")
 			else:#si dans la place de la ville
-				print("vous êtes sur la place de la ville")
+				print(CategorieBatimentDansVille(resultat["city"]))
 		else:
 			print("vous n'êtes pas dans une ville.")

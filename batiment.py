@@ -5,7 +5,7 @@ class batiment:
 	def __init__(self,categorie=None):
 		"""categorie:
 		maison -> hebergement d'habitant -> posibilite d'hebergement, a voir avec le proprio
-		logement -> maison + hebergement pour le gain
+		hebergement -> maison + hebergement pour le gain
 		magasin -> maison + vend des choses ( objet ou services )
 		prison -> prison, n'abrite que les prisonnier
 		mairie -> un par village, n'abrite personne
