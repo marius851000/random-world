@@ -30,7 +30,7 @@ def CategorieBatimentDansVille(ville):
 	"mairie":mairie}
 	return retour
 
-def rendu(self, resultat):
+def rendu(resultat):
 	for loop in resultat['change']:
 		pass
 	if resultat['city'] != None:#si dans une ville
